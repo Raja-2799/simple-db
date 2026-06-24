@@ -1,0 +1,17 @@
+# Build output
+build/
+
+# macOS
+.DS_Store
+
+# VS Code
+.vscode/
+
+# clangd
+compile_commands.json
+
+# CLion
+.idea/
+
+# executables
+simpledb
