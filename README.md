@@ -8,3 +8,8 @@
 rm -rf build                                                                                                                                                                  
 cmake -B build
 ```
+
+
+### Notes
+
+When creating a new file add in CMakeList.txt file.

@@ -6,12 +6,12 @@
 namespace simpledb {
   class BlockId {
    public:
-    BlockId(std::string filename, int32_t block_num);
-    std::string& GetFileName() const;
+    BlockId(const std::string filename, int32_t block_num);
+    const std::string& GetFileName() const;
     int32_t GetBlockNum() const;
 
    private:
-    std::string filename_;
-    int32_t block_num_;
+    const std::string filename_;
+    const int32_t block_num_;
   };
 }  // namespace simpledb
