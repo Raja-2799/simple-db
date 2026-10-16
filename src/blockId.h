@@ -1,17 +1,15 @@
-#pragma once
-
 #include <cstdint>
 #include <string>
-
 namespace simpledb {
   class BlockId {
    public:
-    BlockId(const std::string filename, int32_t block_num);
-    const std::string& GetFileName() const;
-    int32_t GetBlockNum() const;
+    BlockId(const std::string& file_name, int32_t block_num);
+
+    std::string file_name() const;
+    int32_t block_num() const;
 
    private:
-    const std::string filename_;
-    const int32_t block_num_;
+    std::string file_name_;
+    int32_t block_num_;
   };
 }  // namespace simpledb

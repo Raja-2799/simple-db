@@ -3,8 +3,8 @@
 #include <gtest/gtest.h>
 
 TEST(BlockIdTest, ConstructorStoresValue) {
-  simpledb::BlockId blockId("test.tbl", 1);
+  simpledb::BlockId blockId("samplefile.db", 2);
 
-  ASSERT_EQ("test.tbl", blockId.GetFileName());
-  ASSERT_EQ(1, blockId.GetBlockNum());
+  ASSERT_EQ("samplefile.db", blockId.file_name());
+  ASSERT_EQ(2, blockId.block_num());
 }

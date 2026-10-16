@@ -1,14 +1,8 @@
 #include "blockId.h"
-
-#include <cstdint>
-#include <string>
-
 namespace simpledb {
-  BlockId::BlockId(const std::string filename, int32_t block_num)
-      : filename_(filename), block_num_(block_num) {}
+  BlockId::BlockId(const std::string& file_name, int32_t block_num)
+      : file_name_(file_name), block_num_(block_num) {}
 
-  const std::string& BlockId::GetFileName() const { return filename_; }
-
-  int32_t BlockId::GetBlockNum() const { return block_num_; }
-
+  std::string BlockId::file_name() const { return file_name_; }
+  int32_t BlockId::block_num() const { return block_num_; }
 }  // namespace simpledb

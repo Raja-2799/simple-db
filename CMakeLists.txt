@@ -8,8 +8,8 @@ set(CMAKE_CXX_STANDARD 20)
 # Database library
 #
 add_library(simpledb_lib
-    src/page.cc
     src/blockId.cc
+    src/common/byte_buffer.cc
 )
 
 target_include_directories(simpledb_lib PUBLIC src)
@@ -33,8 +33,8 @@ enable_testing()
 find_package(GTest REQUIRED)
 
 add_executable(simpledb_tests
-    tests/page_test.cc
     tests/blockId_test.cc
+    tests/common/byte_buffer_test.cc
 )
 
 target_link_libraries(simpledb_tests
